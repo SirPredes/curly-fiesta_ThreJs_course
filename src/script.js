@@ -32,9 +32,20 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 /**
  * Objects
  */
+/*
 // MeshBasicMaterial
 const material = new THREE.MeshBasicMaterial()
 material.map = doorColorTexture;
+//material.color = new THREE.Color('green'); //Inserted below, the color will tint the texture
+material.wireframe = true;
+
+//material.transparent = true;
+//material.opacity = 0.5;
+//material.alphaMap = doorAlphaTexture;
+material.side = THREE.DoubleSide; // With this the plane can be seen from behind (It couldn't before)
+                                  // Hinders the performance and it is default in Blender (bad)
+*/
+
 
 const sphere = new THREE.Mesh(
     new THREE.SphereGeometry(0.5, 16, 16),
